@@ -23,7 +23,7 @@ public class Rectangle extends AbstractShape {
 	
 	 public void draw(Object canvas)
 	 {
-	    Graphics g = new Graphics();
+	    
 	    g.drawRect(this.getPosition().x, this.getPosition().y, length.intValue(), width.intValue());
        
 	 }
