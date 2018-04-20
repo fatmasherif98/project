@@ -7,16 +7,26 @@ import java.util.Map;
 
 public abstract class AbstractShape implements Shape {
 	private Point position = new Point();
+	private Point positionNew = new Point();
 	private Color color,fillColor;
 	private Map<String,Double> properties = new HashMap<>();
 	
 	
-	public AbstractShape(Point position, Color color, Color fillColor) {
+	public AbstractShape(Point position, Color color, Color fillColor, Point positionNew) {
 		this.position = position;
 		this.color = color;
 		this.fillColor = fillColor;
+		this.positionNew = positionNew;
 	
 		
+	}
+
+	public Point getPositionNew() {
+		return positionNew;
+	}
+
+	public void setPositionNew(Point positionNew) {
+		this.positionNew = positionNew;
 	}
 
 	public Color getFillColor() {
